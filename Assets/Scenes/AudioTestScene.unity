@@ -263,6 +263,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1261950779277521299, guid: fceded59fc757094eaa2fd91b9237eac, type: 3}
+      propertyPath: threshold
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1261950779277521299, guid: fceded59fc757094eaa2fd91b9237eac, type: 3}
+      propertyPath: loudnessSensibility
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3879739345593041907, guid: fceded59fc757094eaa2fd91b9237eac, type: 3}
+      propertyPath: sampleWindow
+      value: 10000
+      objectReference: {fileID: 0}
     - target: {fileID: 6002888490377019210, guid: fceded59fc757094eaa2fd91b9237eac, type: 3}
       propertyPath: m_Name
       value: Circle

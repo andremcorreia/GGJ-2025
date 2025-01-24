@@ -100,8 +100,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minScale: {x: 1, y: 1, z: 1}
   maxScale: {x: 10, y: 10, z: 1}
-  loudnessSensibility: 20
-  threshold: 0
+  loudnessSensibility: 5
+  threshold: 0.1
 --- !u!114 &3879739345593041907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -114,4 +114,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b8b6148c15ba53d489e86c5958927ace, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sampleWindow: 1000
+  sampleWindow: 10000

@@ -9,7 +9,7 @@ public class ScaleFromAudioClip : MonoBehaviour
 
     private AudioLoudnessDetector _audioLoudnessDetector;
 
-    public float loudnessSensibility = 100f;
+    public float loudnessSensibility = 5f;
     public float threshold = 0.1f;
     
     // Start is called before the first frame update
