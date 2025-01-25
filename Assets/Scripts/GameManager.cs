@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -5,9 +6,9 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public static GameManager Instance { get; private set; }
 
     [HideInInspector] public int microphoneSensitivity;
-    [HideInInspector] public int lastScore;
+    [HideInInspector] public float lastScore;
 
-    [HideInInspector] public int[] topScores;
+    public List<float> topScores;
     
     public void Awake()
     {
