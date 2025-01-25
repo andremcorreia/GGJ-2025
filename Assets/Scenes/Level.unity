@@ -1158,9 +1158,9 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  field of view: 49
+  orthographic: 1
+  orthographic size: 4
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -1769,11 +1769,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4414817229990517855, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4414817229990517855, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 4414817229990517855, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1837,11 +1837,11 @@ PrefabInstance:
       objectReference: {fileID: 23077709}
     - target: {fileID: 5624812210280407155, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: maxScale.x
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5624812210280407155, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: maxScale.y
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5624812210280407155, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: minScale.x
@@ -4209,7 +4209,7 @@ GameObject:
   - component: {fileID: 1258797919}
   - component: {fileID: 1258797921}
   m_Layer: 0
-  m_Name: Untitled_Artwork 2
+  m_Name: girl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -35,6 +35,8 @@ public class BubbleController : MonoBehaviour
 
     private float localRotationAngle = 0f;
     private Vector3 baseScale;
+    private float enlapsedCoyoteTime = 0f;
+    private bool coyoting = false;
 
     private void Start()
     {
@@ -96,9 +98,17 @@ public class BubbleController : MonoBehaviour
         }
         else
         {
+            enlapsedCoyoteTime = 0f;
+            coyoting = true;
             winMenu.SetActive(true);
             scoreDisplay.text = timer.score;
             timer.Stop();
         }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        enlapsedCoyoteTime = 0f;
+        coyoting = false;
     }
 }
