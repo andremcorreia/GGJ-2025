@@ -20,6 +20,9 @@ public class BubbleController : MonoBehaviour
     private Rigidbody2D _rigidbody2D;
 
     public Camera _mainCamera;
+    public GameObject winMenu;
+    public TMPro.TMP_Text scoreDisplay;
+    public Timer timer;
     
     private void Start()
     {
@@ -46,6 +49,15 @@ public class BubbleController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        deathMenu.SetActive(true);
+        if (!other.CompareTag("Win") )
+        {
+            deathMenu.SetActive(true);
+        }
+        else
+        {
+            winMenu.SetActive(true);
+            scoreDisplay.text = timer.score;
+            timer.Stop();
+        }
     }
 }
