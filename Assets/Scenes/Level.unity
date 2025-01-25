@@ -981,6 +981,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bubble
       objectReference: {fileID: 0}
+    - target: {fileID: 4311375563891236349, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: m_Radius
+      value: 0.3511232
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311375563891236349, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.020947814
+      objectReference: {fileID: 0}
+    - target: {fileID: 4311375563891236349, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.027928919
+      objectReference: {fileID: 0}
     - target: {fileID: 4414817229990517855, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -1081,6 +1093,14 @@ PrefabInstance:
       propertyPath: scoreDisplay
       value: 
       objectReference: {fileID: 2105182070}
+    - target: {fileID: 5624812210280407155, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: scaleFrequency
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5624812210280407155, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: localRotationSpeed
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
