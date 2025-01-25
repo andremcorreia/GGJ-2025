@@ -40,6 +40,7 @@ public class BubbleController : MonoBehaviour
     private float enlapsedCoyoteTime = 0f;
     private bool coyoting = false;
     public float coyoteBuffer = 1f;
+    private bool dead = false;
 
     private Animator _animator;
     
@@ -53,6 +54,12 @@ public class BubbleController : MonoBehaviour
 
     private void Update()
     {
+        if (dead)
+        {
+            
+            return;
+        }
+
         float horizontalInput = Input.GetAxis("Horizontal");
         horizontalInput *= -1;
         transform.Rotate(Vector3.forward * horizontalInput * rotationSpeed * Time.deltaTime);
@@ -72,6 +79,7 @@ public class BubbleController : MonoBehaviour
             enlapsedCoyoteTime += Time.deltaTime;
             if (enlapsedCoyoteTime > coyoteBuffer)
             {
+                dead = true;
                 _animator.SetTrigger(Death);
                 //deathMenu.SetActive(true);  
                 if (timer != null)
@@ -97,6 +105,11 @@ public class BubbleController : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (dead)
+        {
+            _rigidbody2D.velocity = Vector2.zero;
+            return;
+        }
         float speed = Mathf.Lerp(minSpeed, maxSpeed, _numberFromAudio.loudness);
         _rigidbody2D.velocity = transform.right.normalized * speed;
 
