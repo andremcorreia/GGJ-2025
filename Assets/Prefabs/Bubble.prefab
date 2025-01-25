@@ -55,6 +55,16 @@ MonoBehaviour:
   maxSpeed: 10
   rotationSpeed: 20
   deathMenu: {fileID: 0}
+  _mainCamera: {fileID: 0}
+  winMenu: {fileID: 0}
+  scoreDisplay: {fileID: 0}
+  timer: {fileID: 0}
+  sprite: {fileID: 0}
+  stillSprite: {fileID: 0}
+  moveSprite: {fileID: 0}
+  localRotationSpeed: 2
+  scaleFrequency: 2
+  scaleAmplitude: 0.1
 --- !u!114 &3172869349830199802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,11 +90,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e90c2b0495e89446bc233c07ffefbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loudnessScaleSensibility: 5
-  loudnessSpeedSensibility: 500
+  Sensibility: 5
   threshold: 0.1
-  scaleLoudness: 0
-  speedLoudness: 0
+  loudness: 0
 --- !u!50 &2434792394049602336
 Rigidbody2D:
   serializedVersion: 4
@@ -157,6 +165,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8338569565235863212}
   - component: {fileID: 5369871480545482666}
+  - component: {fileID: 2025891114736265122}
+  - component: {fileID: 1199900472195860929}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -231,3 +241,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &2025891114736265122
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003596093845650208}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d97b6047550928a479feeae437bc645a, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1199900472195860929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8003596093845650208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94d1dd75a815284ca0bef0217453844, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
