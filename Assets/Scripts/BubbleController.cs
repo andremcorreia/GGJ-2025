@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BubbleController : MonoBehaviour
 {
+    private static readonly int Death = Animator.StringToHash("Death");
+
     [Header("Scale Limits")]
     public Vector3 minScale;
     public Vector3 maxScale;
@@ -39,11 +41,14 @@ public class BubbleController : MonoBehaviour
     private bool coyoting = false;
     public float coyoteBuffer = 1f;
 
+    private Animator _animator;
+    
     private void Start()
     {
         _numberFromAudio = GetComponent<NumberFromAudioClip>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         baseScale = transform.localScale; // Save the original scale
+        _animator = GetComponentInChildren<Animator>();
     }
 
     private void Update()
@@ -67,7 +72,8 @@ public class BubbleController : MonoBehaviour
             enlapsedCoyoteTime += Time.deltaTime;
             if (enlapsedCoyoteTime > coyoteBuffer)
             {
-                deathMenu.SetActive(true);  
+                _animator.SetTrigger(Death);
+                //deathMenu.SetActive(true);  
                 if (timer != null)
                 {
                     timer.Stop();
