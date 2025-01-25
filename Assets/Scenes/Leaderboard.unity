@@ -1742,7 +1742,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sounds:
   - name: Leaderboard
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: d1a2b6bcdda357646b0aebb6dd895017, type: 3}
     volume: 0.2
     pitch: 1
     loop: 1
