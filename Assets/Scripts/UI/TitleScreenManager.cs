@@ -37,7 +37,7 @@ namespace UI
             backButton3.onClick.AddListener(ShowTitle);
             
             _audioManager = GetComponent<AudioManager>();
-            //_audioManager.Play("TitleScreen");
+            _audioManager.Play("TitleScreen");
         }
 
         private static void StartGame()
