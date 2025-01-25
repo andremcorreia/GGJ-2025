@@ -23,6 +23,9 @@ public class BubbleController : MonoBehaviour
     public GameObject winMenu;
     public TMPro.TMP_Text scoreDisplay;
     public Timer timer;
+    public SpriteRenderer sprite;
+    public Sprite stillSprite;
+    public Sprite moveSprite;
     
     private void Start()
     {
@@ -46,6 +49,14 @@ public class BubbleController : MonoBehaviour
     {
         float speed = Mathf.Lerp(minSpeed, maxSpeed, _numberFromAudio.loudness);
         _rigidbody2D.velocity = transform.right.normalized * speed;
+        if (speed > 0.1)
+        {
+            sprite.sprite = moveSprite;
+        }
+        else
+        {
+           sprite.sprite = stillSprite;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
