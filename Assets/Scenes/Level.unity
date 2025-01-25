@@ -1117,9 +1117,9 @@ MonoBehaviour:
   sounds:
   - name: GameMusic
     clip: {fileID: 8300000, guid: c0d69121cec31664a8880a65eb8a6c4e, type: 3}
-    volume: 0.2
+    volume: 0
     pitch: 1
-    loop: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!114 &325391603
 MonoBehaviour:
@@ -1842,7 +1842,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: sounds.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: sounds.Array.data[1].clip
@@ -1861,7 +1861,27 @@ PrefabInstance:
       value: Win
       objectReference: {fileID: 0}
     - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: sounds.Array.data[3].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3c690c6d6bccbf44e854a861ba869c98, type: 3}
+    - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: sounds.Array.data[3].name
+      value: Win2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: sounds.Array.data[3].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: sounds.Array.data[1].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: sounds.Array.data[2].volume
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2764095789484087783, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: sounds.Array.data[3].volume
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3702976019144044890, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}

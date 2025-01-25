@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1976481473606085518}
   - component: {fileID: 2434792394049602336}
   - component: {fileID: 4311375563891236349}
-  - component: {fileID: 2764095789484087783}
+  - component: {fileID: 3964637819426652725}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -155,7 +155,7 @@ CircleCollider2D:
   m_Offset: {x: 0.014076233, y: -0.02792891}
   serializedVersion: 2
   m_Radius: 0.2934723
---- !u!114 &2764095789484087783
+--- !u!114 &3964637819426652725
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -174,14 +174,14 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Lose
-    clip: {fileID: 8300000, guid: c57ad04f7b025ed43bfe56989a84750c, type: 3}
+  - name: Win
+    clip: {fileID: 8300000, guid: 3c690c6d6bccbf44e854a861ba869c98, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Win
-    clip: {fileID: 8300000, guid: 3c690c6d6bccbf44e854a861ba869c98, type: 3}
+  - name: Lose
+    clip: {fileID: 8300000, guid: c57ad04f7b025ed43bfe56989a84750c, type: 3}
     volume: 0.2
     pitch: 1
     loop: 0

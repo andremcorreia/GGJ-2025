@@ -47,7 +47,10 @@ namespace Audio
             audioSource.volume = volume;
             audioSource.pitch = pitch;
             audioSource.loop = loop;
-            this.source = audioSource;
+
+            audioSource.playOnAwake = false;
+            
+            source = audioSource;
         }
 
         /// <summary>
