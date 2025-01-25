@@ -1,11 +1,13 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Audio;
 using UnityEngine;
 
 public class BubbleController : MonoBehaviour
 {
     private static readonly int Death = Animator.StringToHash("Death");
+    private static readonly int Speed = Animator.StringToHash("Speed");
 
     [Header("Scale Limits")]
     public Vector3 minScale;
@@ -26,9 +28,7 @@ public class BubbleController : MonoBehaviour
     public TMPro.TMP_Text scoreDisplay;
     public Timer timer;
     public SpriteRenderer sprite;
-    public Sprite stillSprite;
-    public Sprite moveSprite;
-
+    
     // New variables for bubbly effects
     [Header("Bubbly Effect Settings")]
     public float localRotationSpeed = 2f; // Speed of local rotation oscillation
@@ -43,20 +43,20 @@ public class BubbleController : MonoBehaviour
     private bool dead = false;
 
     private Animator _animator;
-    
+    private AudioManager _audioManager;
     private void Start()
     {
         _numberFromAudio = GetComponent<NumberFromAudioClip>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
         baseScale = transform.localScale; // Save the original scale
         _animator = GetComponentInChildren<Animator>();
+        _audioManager = GetComponent<AudioManager>();
     }
 
     private void Update()
     {
         if (dead)
         {
-            
             return;
         }
 
@@ -81,6 +81,7 @@ public class BubbleController : MonoBehaviour
             {
                 dead = true;
                 _animator.SetTrigger(Death);
+                _audioManager.Play("Pop");
                 //deathMenu.SetActive(true);  
                 if (timer != null)
                 {
@@ -113,14 +114,7 @@ public class BubbleController : MonoBehaviour
         float speed = Mathf.Lerp(minSpeed, maxSpeed, _numberFromAudio.loudness);
         _rigidbody2D.velocity = transform.right.normalized * speed;
 
-        if (speed > 0.1)
-        {
-            sprite.sprite = moveSprite;
-        }
-        else
-        {
-            sprite.sprite = stillSprite;
-        }
+        _animator.SetFloat(Speed, speed);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
@@ -135,8 +129,10 @@ public class BubbleController : MonoBehaviour
         else
         {
             winMenu.SetActive(true);
+            _audioManager.Play("Win");
             scoreDisplay.text = timer.score;
             timer.Stop();
+            GameManager.Instance.lastScore = timer.elapsedTime;
         }
     }
 

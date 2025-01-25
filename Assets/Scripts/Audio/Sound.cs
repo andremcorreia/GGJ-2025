@@ -55,6 +55,7 @@ namespace Audio
         /// </summary>
         public void Play()
         {
+            Debug.Log("Playing " + name);
             source.Play();
         }
 

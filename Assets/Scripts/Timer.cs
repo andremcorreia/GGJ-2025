@@ -6,7 +6,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     public TMP_Text timerText;
-    private float elapsedTime = 0f;
+    [HideInInspector] public float elapsedTime = 0f;
     public string score;
 
     public void Stop()

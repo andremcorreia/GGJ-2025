@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1976481473606085518}
   - component: {fileID: 2434792394049602336}
   - component: {fileID: 4311375563891236349}
+  - component: {fileID: 2764095789484087783}
   m_Layer: 0
   m_Name: Bubble
   m_TagString: Untagged
@@ -49,8 +50,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b088c52c98709b045ae838c04502c7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minScale: {x: 2, y: 2, z: 0}
-  maxScale: {x: 11, y: 11, z: 0}
+  minScale: {x: 0.75, y: 0.75, z: 0}
+  maxScale: {x: 3.5, y: 3.5, z: 0}
   minSpeed: 0
   maxSpeed: 10
   rotationSpeed: 20
@@ -59,12 +60,11 @@ MonoBehaviour:
   winMenu: {fileID: 0}
   scoreDisplay: {fileID: 0}
   timer: {fileID: 0}
-  sprite: {fileID: 0}
-  stillSprite: {fileID: 0}
-  moveSprite: {fileID: 0}
-  localRotationSpeed: 2
-  scaleFrequency: 2
+  sprite: {fileID: 5369871480545482666}
+  localRotationSpeed: 1
+  scaleFrequency: 0.5
   scaleAmplitude: 0.1
+  coyoteBuffer: 0.3
 --- !u!114 &3172869349830199802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,8 +90,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e90c2b0495e89446bc233c07ffefbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensibility: 5
-  threshold: 0.1
+  Sensibility: 100
+  threshold: 0.01
   loudness: 0
 --- !u!50 &2434792394049602336
 Rigidbody2D:
@@ -152,9 +152,40 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.014076233, y: -0.02792891}
   serializedVersion: 2
-  m_Radius: 0.4
+  m_Radius: 0.2934723
+--- !u!114 &2764095789484087783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3702976019144044890}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab8be89c3ca332b49806d1963f849a14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: Pop
+    clip: {fileID: 8300000, guid: dad4f27b125961a4f82a69ae95e11f58, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Lose
+    clip: {fileID: 8300000, guid: c57ad04f7b025ed43bfe56989a84750c, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Win
+    clip: {fileID: 8300000, guid: 3c690c6d6bccbf44e854a861ba869c98, type: 3}
+    volume: 0.2
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!1 &8003596093845650208
 GameObject:
   m_ObjectHideFlags: 0
@@ -274,3 +305,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94d1dd75a815284ca0bef0217453844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  menu: {fileID: 0}
