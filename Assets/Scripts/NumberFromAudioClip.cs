@@ -6,14 +6,12 @@ using UnityEngine.Serialization;
 
 public class NumberFromAudioClip : MonoBehaviour
 {
-    public float loudnessScaleSensibility = 5f;
-    public float loudnessSpeedSensibility = 5f;
+    public float Sensibility = 5f;
     public float threshold = 0.1f;
     
     private AudioLoudnessDetector _audioLoudnessDetector;
     
-    [HideInInspector] public float scaleLoudness;
-    [HideInInspector] public float speedLoudness;
+    [HideInInspector] public float loudness;
     
     // Start is called before the first frame update
     private void Start()
@@ -24,12 +22,11 @@ public class NumberFromAudioClip : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        float loudness = _audioLoudnessDetector.GetLoudnessFromMicrophone();
+        loudness = _audioLoudnessDetector.GetLoudnessFromMicrophone();
         
-        scaleLoudness = loudness * loudnessScaleSensibility;
-        speedLoudness = loudness * loudnessSpeedSensibility;
+        loudness = loudness * 10;
         
-        if (scaleLoudness < threshold) scaleLoudness = 0f;
-        if (speedLoudness < threshold) speedLoudness = 0f;
+        if (loudness < threshold) loudness = 0f;
+        if (loudness > 1) loudness = 1f;
     }
 }

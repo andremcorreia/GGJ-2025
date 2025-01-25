@@ -19,13 +19,15 @@ public class BubbleController : MonoBehaviour
     private NumberFromAudioClip _numberFromAudio;
     private Rigidbody2D _rigidbody2D;
 
-    private Camera _mainCamera;
+    public Camera _mainCamera;
+    public GameObject winMenu;
+    public TMPro.TMP_Text scoreDisplay;
+    public Timer timer;
     
     private void Start()
     {
         _numberFromAudio = GetComponent<NumberFromAudioClip>();
         _rigidbody2D = GetComponent<Rigidbody2D>();
-        _mainCamera = Camera.main;
     }
 
     private void Update()
@@ -33,8 +35,8 @@ public class BubbleController : MonoBehaviour
         float horizontalInput = Input.GetAxis("Horizontal");
         horizontalInput *= -1;
         transform.Rotate(Vector3.forward * horizontalInput * rotationSpeed * Time.deltaTime);
-        //lerp value from min scale to max scale
-        transform.localScale = Vector3.Lerp(minScale, maxScale, _numberFromAudio.scaleLoudness);
+
+        transform.localScale = Vector3.Lerp(minScale, maxScale, _numberFromAudio.loudness);
         
         _mainCamera.transform.position = new Vector3(transform.position.x, transform.position.y, -10);
         _mainCamera.transform.Rotate(Vector3.forward * horizontalInput * rotationSpeed * Time.deltaTime);
@@ -42,12 +44,20 @@ public class BubbleController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        float speed = Mathf.Clamp(_numberFromAudio.speedLoudness, minSpeed, maxSpeed);
-        Debug.Log("Speed " + speed);
-        _rigidbody2D.velocity = Vector2.right.normalized * speed;
+        float speed = Mathf.Lerp(minSpeed, maxSpeed, _numberFromAudio.loudness);
+        _rigidbody2D.velocity = transform.right.normalized * speed;
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        deathMenu.SetActive(true);
+        if (!other.CompareTag("Win") )
+        {
+            deathMenu.SetActive(true);
+        }
+        else
+        {
+            winMenu.SetActive(true);
+            scoreDisplay.text = timer.score;
+            timer.Stop();
+        }
     }
 }
