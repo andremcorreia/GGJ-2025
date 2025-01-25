@@ -319,7 +319,7 @@ MonoBehaviour:
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
-  m_MatchWidthOrHeight: 0
+  m_MatchWidthOrHeight: 1
   m_PhysicalUnit: 3
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   sounds:
   - name: GameMusic
     clip: {fileID: 8300000, guid: c0d69121cec31664a8880a65eb8a6c4e, type: 3}
-    volume: 0
+    volume: 0.2
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -1219,7 +1219,7 @@ Transform:
   m_GameObject: {fileID: 327118016}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: -30.2, y: -1.1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1327,13 +1327,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 439783090}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 19.1, y: 20.1, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 15.61, y: 19.74, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!61 &439783093
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1366,7 +1366,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -2.0293784}
+  m_Offset: {x: 0, y: -2.0293791}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -1377,7 +1377,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 5.058756}
+  m_Size: {x: 1, y: 2.7293868}
   m_EdgeRadius: 0
 --- !u!1 &474551611
 GameObject:
@@ -1825,6 +1825,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 23077709}
     - target: {fileID: 1976481473606085518, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: Sensibility
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1976481473606085518, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: loudnessScaleSensibility
       value: 50
       objectReference: {fileID: 0}
@@ -1964,6 +1968,10 @@ PrefabInstance:
       propertyPath: stillSprite
       value: 
       objectReference: {fileID: 21300000, guid: a95e540c7ec67d04e96eecd0ec47902e, type: 3}
+    - target: {fileID: 5624812210280407155, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: coyoteBuffer
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5624812210280407155, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: scoreDisplay
       value: 

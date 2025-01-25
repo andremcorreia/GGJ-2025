@@ -38,6 +38,8 @@ namespace UI
             
             _audioManager = GetComponent<AudioManager>();
             _audioManager.Play("TitleScreen");
+
+            if (GameManager.Instance.microphoneSensitivity < 1) GameManager.Instance.microphoneSensitivity = 10;
         }
 
         private static void StartGame()

@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour
 {
     [HideInInspector] public static GameManager Instance { get; private set; }
 
-    [HideInInspector] public int microphoneSensitivity;
+    [HideInInspector] public int microphoneSensitivity = 10;
     [HideInInspector] public float lastScore;
 
     public List<float> topScores;

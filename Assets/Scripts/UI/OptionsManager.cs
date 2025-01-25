@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +18,11 @@ namespace UI
                 sliderText.text = micSlider.value.ToString();
                 GameManager.Instance.microphoneSensitivity = (int) micSlider.value;
             });  
+        }
+
+        private void OnEnable()
+        {
+            GameManager.Instance.microphoneSensitivity = (int) micSlider.value;
         }
     }
 }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using Audio;
 using UnityEngine;
 
@@ -126,6 +123,7 @@ public class BubbleController : MonoBehaviour
             //timer.Stop();
             enlapsedCoyoteTime = 0f;
             coyoting = true;
+            sprite.color = Color.red;
         }
         else
         {
@@ -141,5 +139,6 @@ public class BubbleController : MonoBehaviour
     {
         enlapsedCoyoteTime = 0f;
         coyoting = false;
+        sprite.color = Color.white;
     }
 }

@@ -1,12 +1,8 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 public class NumberFromAudioClip : MonoBehaviour
 {
-    public float Sensibility = 5f;
+    public float sensibility = 10f;
     public float threshold = 0.1f;
     
     private AudioLoudnessDetector _audioLoudnessDetector;
@@ -17,6 +13,9 @@ public class NumberFromAudioClip : MonoBehaviour
     private void Start()
     {
         _audioLoudnessDetector = GetComponent<AudioLoudnessDetector>();
+
+        if (!Mathf.Approximately(sensibility, GameManager.Instance.microphoneSensitivity))
+            sensibility = GameManager.Instance.microphoneSensitivity;
     }
 
     // Update is called once per frame
@@ -24,7 +23,7 @@ public class NumberFromAudioClip : MonoBehaviour
     {
         loudness = _audioLoudnessDetector.GetLoudnessFromMicrophone();
         
-        loudness = loudness * 10;
+        loudness *= sensibility;
         
         if (loudness < threshold) loudness = 0f;
         if (loudness > 1) loudness = 1f;
