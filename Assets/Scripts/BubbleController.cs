@@ -37,6 +37,7 @@ public class BubbleController : MonoBehaviour
     private Vector3 baseScale;
     private float enlapsedCoyoteTime = 0f;
     private bool coyoting = false;
+    public float coyoteBuffer = 1f;
 
     private void Start()
     {
@@ -60,6 +61,19 @@ public class BubbleController : MonoBehaviour
 
         // Bubbly Effects
         ApplyBubblyEffects();
+
+        if (coyoting)
+        {
+            enlapsedCoyoteTime += Time.deltaTime;
+            if (enlapsedCoyoteTime > coyoteBuffer)
+            {
+                deathMenu.SetActive(true);  
+                if (timer != null)
+                {
+                    timer.Stop();
+                }
+            }
+        }
     }
 
     private void ApplyBubblyEffects()
@@ -94,12 +108,13 @@ public class BubbleController : MonoBehaviour
     {
         if (!other.CompareTag("Win"))
         {
-            deathMenu.SetActive(true);
+            //deathMenu.SetActive(true);
+            //timer.Stop();
+            enlapsedCoyoteTime = 0f;
+            coyoting = true;
         }
         else
         {
-            enlapsedCoyoteTime = 0f;
-            coyoting = true;
             winMenu.SetActive(true);
             scoreDisplay.text = timer.score;
             timer.Stop();
