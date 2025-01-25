@@ -64,7 +64,7 @@ MonoBehaviour:
   localRotationSpeed: 1
   scaleFrequency: 0.5
   scaleAmplitude: 0.1
-  coyoteBuffer: 0.3
+  coyoteBuffer: 1
 --- !u!114 &3172869349830199802
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,9 +90,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e90c2b0495e89446bc233c07ffefbdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sensibility: 100
+  sensibility: 10
   threshold: 0.01
   loudness: 0
+  sliderText: {fileID: 0}
 --- !u!50 &2434792394049602336
 Rigidbody2D:
   serializedVersion: 4

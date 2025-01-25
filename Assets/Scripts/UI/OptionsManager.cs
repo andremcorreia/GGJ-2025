@@ -12,17 +12,14 @@ namespace UI
         
         private void Start()
         {
+            micSlider.value = GameManager.Instance.microphoneSensitivity;
+            
             micSlider.onValueChanged.AddListener((v) =>
             {
                 // ReSharper disable once SpecifyACultureInStringConversionExplicitly
                 sliderText.text = micSlider.value.ToString();
                 GameManager.Instance.microphoneSensitivity = (int) micSlider.value;
             });  
-        }
-
-        private void OnEnable()
-        {
-            GameManager.Instance.microphoneSensitivity = (int) micSlider.value;
         }
     }
 }
