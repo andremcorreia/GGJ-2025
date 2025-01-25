@@ -1727,6 +1727,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1199900472195860929, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: menu
+      value: 
+      objectReference: {fileID: 23077709}
     - target: {fileID: 1976481473606085518, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: threshold
       value: 0.01

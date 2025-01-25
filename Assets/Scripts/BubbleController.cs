@@ -110,6 +110,7 @@ public class BubbleController : MonoBehaviour
             _rigidbody2D.velocity = Vector2.zero;
             return;
         }
+        
         float speed = Mathf.Lerp(minSpeed, maxSpeed, _numberFromAudio.loudness);
         _rigidbody2D.velocity = transform.right.normalized * speed;
 
