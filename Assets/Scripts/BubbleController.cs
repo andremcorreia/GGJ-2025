@@ -42,7 +42,6 @@ public class BubbleController : MonoBehaviour
     private void FixedUpdate()
     {
         float speed = Mathf.Lerp(minSpeed, maxSpeed, _numberFromAudio.loudness);
-        Debug.Log("Speed " + speed);
         _rigidbody2D.velocity = transform.right.normalized * speed;
     }
 
