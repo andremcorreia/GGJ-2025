@@ -3585,15 +3585,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 49542aced3eb7b840ad44b958e29152a, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4563,7 +4563,11 @@ PrefabInstance:
     - target: {fileID: 1199900472195860929, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: menu
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1346463827}
+    - target: {fileID: 1976481473606085518, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
+      propertyPath: slider
+      value: 
+      objectReference: {fileID: 1181839703}
     - target: {fileID: 1976481473606085518, guid: e16e20cc84c2c2d46b4ca956b9e99f54, type: 3}
       propertyPath: sliderText
       value: 
@@ -7528,7 +7532,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c38e6933fa1ccb447b8bd2a79b8d84cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
