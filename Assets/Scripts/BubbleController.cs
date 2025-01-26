@@ -43,7 +43,6 @@ public class BubbleController : MonoBehaviour
 
     private Animator _animator;
     private AudioManager _audioManager;
-    public Slider slider;
     private void Start()
     {
         _numberFromAudio = GetComponent<NumberFromAudioClip>();
@@ -51,7 +50,6 @@ public class BubbleController : MonoBehaviour
         baseScale = transform.localScale; // Save the original scale
         _animator = GetComponentInChildren<Animator>();
         _audioManager = GetComponent<AudioManager>();
-        slider.value = GameManager.Instance.microphoneSensitivity;
     }
 
     private void Update()

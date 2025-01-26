@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class NumberFromAudioClip : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class NumberFromAudioClip : MonoBehaviour
     
     [HideInInspector] public float loudness;
     
+    public Slider slider;
     public TextMeshProUGUI sliderText;
     
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class NumberFromAudioClip : MonoBehaviour
 
         if (GameManager.Instance.microphoneSensitivity < 1) GameManager.Instance.microphoneSensitivity = 10;
         
+        slider.value = GameManager.Instance.microphoneSensitivity;
         sensibility = GameManager.Instance.microphoneSensitivity;
     }
 
