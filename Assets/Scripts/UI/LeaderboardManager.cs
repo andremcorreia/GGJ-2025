@@ -15,8 +15,8 @@ namespace UI
         public Button creditsButton;
         
         [Header("Leaderboard")]
-        public Color normalColor = Color.black;
-        public Color playerColor = Color.white;
+        public Color normalColor = Color.white;
+        public Color playerColor = Color.yellow;
         public List<TextMeshProUGUI> leaderboardBrackets;
 
         private AudioManager _audioManager;
@@ -32,7 +32,7 @@ namespace UI
             
             for (int i = 0; i < GameManager.Instance.topScores.Count; i++)
             {
-                if (!(GameManager.Instance.lastScore > GameManager.Instance.topScores[i])) continue;
+                if (!(GameManager.Instance.lastScore < GameManager.Instance.topScores[i])) continue;
                 index = i;
                 break;
             }

@@ -130,8 +130,8 @@ public class BubbleController : MonoBehaviour
             winMenu.SetActive(true);
             _audioManager.Play("Win");
             scoreDisplay.text = timer.score;
-            timer.Stop();
             GameManager.Instance.lastScore = timer.elapsedTime;
+            timer.Stop();
         }
     }
 
