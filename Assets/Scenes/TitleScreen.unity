@@ -4205,11 +4205,18 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Have you ever wondered where bubbles that don''t pop go?
 
-    
 
-    Help
-    this bubble arrive to this destination by using your voice to speed it up and
-    using AD or Left and Right Arrow Keys to tilt the screen'
+    Help this
+    bubble arrive to this destination by using your voice to speed it up and using
+    AD or Left and Right Arrow Keys to tilt the screen.
+
+
+    If you hit any of the
+    obstacles the bubble will turn red and pop!
+
+
+    Press Escape to pause the
+    game!'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a5acb7c51c4f4cd4c8afa47041d2e604, type: 2}
   m_sharedMaterial: {fileID: 4348578535364486818, guid: a5acb7c51c4f4cd4c8afa47041d2e604, type: 2}
@@ -4236,7 +4243,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 82.15
+  m_fontSize: 58.65
   m_fontSizeBase: 1
   m_fontWeight: 400
   m_enableAutoSizing: 1
