@@ -3204,7 +3204,7 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: c0d69121cec31664a8880a65eb8a6c4e, type: 3}
     volume: 0.2
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
 --- !u!114 &325391603
 MonoBehaviour:
