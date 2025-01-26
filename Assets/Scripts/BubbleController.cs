@@ -1,5 +1,6 @@
 using Audio;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BubbleController : MonoBehaviour
 {
@@ -41,6 +42,7 @@ public class BubbleController : MonoBehaviour
 
     private Animator _animator;
     private AudioManager _audioManager;
+    public Slider slider;
     private void Start()
     {
         _numberFromAudio = GetComponent<NumberFromAudioClip>();
@@ -48,6 +50,7 @@ public class BubbleController : MonoBehaviour
         baseScale = transform.localScale; // Save the original scale
         _animator = GetComponentInChildren<Animator>();
         _audioManager = GetComponent<AudioManager>();
+        slider.value = GameManager.Instance.microphoneSensitivity;
     }
 
     private void Update()
@@ -117,10 +120,19 @@ public class BubbleController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Win"))
+        if (other.CompareTag("Die"))
         {
-            //deathMenu.SetActive(true);
-            //timer.Stop();
+            print("in");
+            dead = true;
+            _animator.SetTrigger(Death);
+            _audioManager.Play("Pop");
+            if (timer != null)
+            {
+                timer.Stop();
+            }
+        }
+        else if (!other.CompareTag("Win"))
+        {
             enlapsedCoyoteTime = 0f;
             coyoting = true;
             sprite.color = Color.red;
