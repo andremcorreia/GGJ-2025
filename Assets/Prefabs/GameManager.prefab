@@ -47,13 +47,13 @@ MonoBehaviour:
   microphoneSensitivity: 0
   lastScore: 0
   topScores:
+  - 46
+  - 53
+  - 68
   - 60
-  - 65
-  - 70
-  - 75
-  - 80
-  - 85
   - 90
-  - 95
-  - 100
-  - 105
+  - 120
+  - 150
+  - 180
+  - 210
+  - 240
