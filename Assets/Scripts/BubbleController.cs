@@ -23,6 +23,7 @@ public class BubbleController : MonoBehaviour
 
     public Camera _mainCamera;
     public GameObject winMenu;
+    public GameObject pauseMenu;
     public TMPro.TMP_Text scoreDisplay;
     public Timer timer;
     public SpriteRenderer sprite;
@@ -59,7 +60,29 @@ public class BubbleController : MonoBehaviour
         {
             return;
         }
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (Time.timeScale <= Mathf.Epsilon)
+            {
+                Debug.Log("Pause deactivated");
+                Time.timeScale = 1f;
+                pauseMenu.SetActive(false);
+                Debug.Log(pauseMenu.activeSelf);
+                Debug.Log(Time.timeScale);
+            }
+            else
+            {
+                Debug.Log("Pause activated");
+                pauseMenu.SetActive(true);
+                Time.timeScale = 0f;
+                Debug.Log(pauseMenu.activeSelf);
+                Debug.Log(Time.timeScale);
+            }
+        }
 
+        if (Time.timeScale <= Mathf.Epsilon) return;
+        
         float horizontalInput = Input.GetAxis("Horizontal");
         horizontalInput *= -1;
         transform.Rotate(Vector3.forward * horizontalInput * rotationSpeed * Time.deltaTime);
